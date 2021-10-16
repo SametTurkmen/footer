@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap");
+/* 
+        Samet TÜRKMEN
+*/
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    font-family: "Mulish", sans-serif;
+
+    &:focus {
+        outline: 0;
+    }
+}
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #f7f8fc;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 50px;
+    border-top: 5px solid #10182f;
+    background-color: #fff;
+    box-shadow: 0 10px 76px -12px rgba(#001d93, 0.1);
+
+    .footer-top {
+        display: flex;
+        align-items: flex-start;
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 50px;
+        }
+
+        .footer-menu {
+            margin-left: auto;
+            display: flex;
+            nav {
+                min-width: 200px;
+                margin-right: 40px;
+                h5 {
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 18px;
+                    color: #222c46;
+                    text-transform: uppercase;
+                    margin-right: 100px;
+                    margin-bottom: 25px;
+                }
+                ul {
+                    li {
+                        a {
+                            display: inline-block;
+                            font-size: 16px;
+                            font-weight: normal;
+                            line-height: 40px;
+                            color: #545d7a;
+                            position: relative;
+                            &::before {
+                                content: "";
+                                height: 5px;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                background-color: #545d7a;
+                                width: 0;
+                                transition: 300ms width;
+                                opacity: 0.3;
+                                border-radius: 5px;
+                            }
+
+                            &:hover {
+                                color: #222c46;
+                                &::before {
+                                    width: 100%;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            font-size: 14px;
+            color: #545d7a;
+        }
+
+        .footer-menu {
+            ul {
+                display: flex;
+                li {
+                    margin: 0 30px;
+                    a {
+                        display: block;
+                        font-size: 14px;
+                        color: #545d7a;
+
+                        position: relative;
+                        &::before {
+                            content: "";
+                            height: 5px;
+                            position: absolute;
+                            bottom: -5px;
+                            left: 0;
+                            background-color: #545d7a;
+                            width: 0;
+                            transition: 300ms width;
+                            opacity: 0.3;
+                            border-radius: 5px;
+                        }
+
+                        &:hover {
+                            color: #222c46;
+                            &::before {
+                                width: 100%;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-social {
+            display: flex;
+            li {
+                a {
+                    width: 48px;
+                    height: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // padding: 15px;
+                    margin-right: 15px;
+                    transition: 300ms background-color;
+                    border-radius: 50%;
+                    img {
+                        opacity: 0.55;
+                        transition: 300ms opacity, 300ms background-color;
+                    }
+                    &:hover {
+                        background-color: rgba(#10182f, 0.3);
+
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
